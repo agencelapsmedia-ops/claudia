@@ -332,8 +332,8 @@ const LANDING_HTML = `
     <li><a href="#security">S&eacute;curit&eacute;</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="/(auth)/login" class="btn-ghost">Connexion</a>
-    <a href="/(auth)/register" class="btn-primary">Cr&eacute;er mon compte</a>
+    <a href="/login" class="btn-ghost">Connexion</a>
+    <a href="/register" class="btn-primary">Cr&eacute;er mon compte</a>
   </div>
 </nav>
 
@@ -355,7 +355,7 @@ const LANDING_HTML = `
       Recommandations IA prioris&eacute;es. Rapports professionnels. Z&eacute;ro complexit&eacute;.
     </p>
     <div class="hero-buttons">
-      <a href="/(auth)/register" class="btn-primary btn-large">Cr&eacute;er mon compte gratuitement</a>
+      <a href="/register" class="btn-primary btn-large">Cr&eacute;er mon compte gratuitement</a>
       <a href="#dashboard" class="btn-ghost btn-large">Voir la d&eacute;mo &rarr;</a>
     </div>
     <div class="hero-stats">
@@ -497,8 +497,8 @@ const LANDING_HTML = `
     <h2>Commencez votre<br/><span class="gradient-text">premier audit gratuit</span></h2>
     <p>Rejoignez les PME qu&eacute;b&eacute;coises qui font confiance &agrave; CLAUDIA pour leur cybers&eacute;curit&eacute;.</p>
     <div class="cta-buttons">
-      <a href="/(auth)/register" class="btn-primary btn-large">Cr&eacute;er mon compte &mdash; Gratuit</a>
-      <a href="/(auth)/login" class="btn-ghost btn-large">J'ai d&eacute;j&agrave; un compte</a>
+      <a href="/register" class="btn-primary btn-large">Cr&eacute;er mon compte &mdash; Gratuit</a>
+      <a href="/login" class="btn-ghost btn-large">J'ai d&eacute;j&agrave; un compte</a>
     </div>
   </div>
 </section>
