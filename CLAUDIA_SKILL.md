@@ -16,33 +16,38 @@
 
 ---
 
-## 🎨 PALETTE DE COULEURS CLAUDIA
+## 🎨 PALETTE DE COULEURS — Charte CyberTIA v1.0
 ```ts
 export const Colors = {
-  // Backgrounds
-  bgPrimary: '#0A1628',      // Bleu marine profond
-  bgSecondary: '#1C2333',    // Gris anthracite
-  bgCard: '#141E30',         // Cards/surfaces
+  // Backgrounds — Charte CyberTIA v1.0
+  bgPrimary: '#0D2340',      // Bleu Marine (charte)
+  bgSecondary: '#112A45',    // Marine dérivé (surfaces)
+  bgCard: '#143050',         // Marine éclairci (cards dark)
 
-  // Accents
-  electric: '#1E5FFF',       // Bleu électrique — CTAs, boutons
-  cyan: '#00D4FF',           // Cyan — highlights, IA, actif
+  // Accents — Charte CyberTIA v1.0
+  acier: '#1E6FA8',          // Bleu Acier — boutons, titres, liens
+  cyan: '#00AACC',           // Cyan Électrique — hover, highlights
 
   // Text
   textPrimary: '#FFFFFF',
-  textSecondary: '#8A9BB5',
+  textSecondary: '#8A9BB5',  // Sur fonds sombres
+  textSlate: '#3A4A5A',      // Gris Slate — sur fonds clairs (charte)
   textMuted: '#4A5568',
 
-  // Status
-  danger: '#FF3B30',         // Critique / Erreur
-  success: '#34C759',        // Succès / OK
-  warning: '#FF9500',        // Avertissement
-  info: '#00D4FF',           // Info / IA
+  // Surfaces claires
+  bgLight: '#FFFFFF',
+  bgLightCard: '#EDF1F5',    // Gris Clair — cartes sur fond blanc
 
-  // Gradients
-  gradientPrimary: ['#0A1628', '#1E5FFF'],
-  gradientCard: ['#141E30', '#1C2333'],
-  gradientCyan: ['#1E5FFF', '#00D4FF'],
+  // Status — Charte CyberTIA v1.0
+  danger: '#E03C3C',         // Rouge Alerte
+  success: '#2DB87A',        // Vert Succès — CTA principal
+  warning: '#FF9500',        // Avertissement
+  info: '#00AACC',           // Cyan Électrique
+
+  // Gradients — seul dégradé autorisé: Marine → Acier
+  gradientPrimary: ['#0D2340', '#1E6FA8'],
+  gradientCard: ['#143050', '#112A45'],
+  gradientCyan: ['#1E6FA8', '#00AACC'],
 }
 ```
 
@@ -156,21 +161,22 @@ claudia-app/
 ## 🖥️ RÈGLES DE DESIGN UI
 
 ### Cartes (Cards)
-- Background : `#141E30`
-- Border : `1px solid rgba(255,255,255,0.06)`
+- Background : `#143050` (dark) / `#EDF1F5` (light)
+- Border : `1px solid rgba(30,111,168,0.25)`
 - Border radius : `16px`
 - Padding : `16px`
 - Shadow : `0 4px 24px rgba(0,0,0,0.4)`
 
 ### Boutons
-- Primary : gradient `#1E5FFF → #00D4FF`, radius `12px`, height `52px`
-- Secondary : border `#1E5FFF`, background transparent
-- Danger : background `#FF3B30`
+- Primary (CTA) : background `#2DB87A` (Vert Succès), radius `12px`, height `52px`
+- Accent : gradient `#1E6FA8 → #00AACC` (Acier → Cyan)
+- Secondary : border `#1E6FA8`, background transparent
+- Danger : background `#E03C3C`
 - Press animation : scale `0.97` avec Reanimated
 
 ### Inputs
-- Background : `#1C2333`
-- Border focus : `#1E5FFF` avec glow effect
+- Background : `#112A45`
+- Border focus : `#1E6FA8` avec glow effect
 - Border radius : `12px`
 - Height : `52px`
 
@@ -180,8 +186,8 @@ claudia-app/
 - Gap entre cards : `12px`
 
 ### Effets spéciaux (look IA)
-- Gradient text pour les titres principaux (cyan → bleu)
-- Subtle glow sur les éléments actifs (cyan #00D4FF, opacity 0.3)
+- Gradient text pour les titres principaux (cyan → blanc)
+- Subtle glow sur les éléments actifs (cyan #00AACC, opacity 0.3)
 - Backdrop blur sur les modals
 - Particules / grid en arrière-plan sur le splash (subtil)
 - Animations staggered à l'entrée des listes

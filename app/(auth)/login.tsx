@@ -76,9 +76,11 @@ export default function LoginScreen() {
             </Pressable>
           </View>
 
-          <Pressable onPress={() => router.push('/(auth)/forgot-password')}>
-            <Text style={styles.forgotText}>Mot de passe oublié?</Text>
-          </Pressable>
+          <View style={styles.linksRow}>
+            <Pressable onPress={() => router.push('/(auth)/forgot-password')}>
+              <Text style={styles.forgotText}>Mot de passe oublié?</Text>
+            </Pressable>
+          </View>
 
           <Pressable onPress={handleLogin} disabled={isLoading}>
             <LinearGradient
@@ -95,6 +97,13 @@ export default function LoginScreen() {
             </LinearGradient>
           </Pressable>
         </View>
+
+        <Pressable onPress={() => router.push('/(auth)/register')}>
+          <Text style={styles.registerLink}>
+            Pas encore de compte?{' '}
+            <Text style={styles.registerLinkAccent}>Créer mon compte</Text>
+          </Text>
+        </Pressable>
 
         <Text style={styles.footerText}>LAPSMEDIA × CyberTIA</Text>
       </KeyboardAvoidingView>
@@ -160,10 +169,24 @@ const styles = StyleSheet.create({
   eyeButton: {
     padding: 4,
   },
+  linksRow: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
   forgotText: {
     color: Colors.cyan,
     fontSize: 13,
     textAlign: 'right',
+  },
+  registerLink: {
+    textAlign: 'center',
+    color: Colors.textSecondary,
+    fontSize: 14,
+    marginTop: 16,
+  },
+  registerLinkAccent: {
+    color: Colors.cyan,
+    fontWeight: '600',
   },
   loginButton: {
     height: 52,

@@ -1,20 +1,30 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/colors';
+import WebLanding from '@/components/WebLanding';
 
-export default function SplashScreen() {
+export default function IndexScreen() {
   const router = useRouter();
 
+  // Mobile: splash -> login après 2.5s
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.replace('/(auth)/login');
-    }, 2500);
-    return () => clearTimeout(timer);
+    if (Platform.OS !== 'web') {
+      const timer = setTimeout(() => {
+        router.replace('/(auth)/login');
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
+  // Web: afficher la landing page
+  if (Platform.OS === 'web') {
+    return <WebLanding />;
+  }
+
+  // Mobile: splash screen
   return (
     <LinearGradient colors={[Colors.bgPrimary, '#0D1F3C', Colors.bgPrimary]} style={styles.container}>
       <View style={styles.logoContainer}>
